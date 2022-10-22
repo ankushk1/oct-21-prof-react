@@ -1,30 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
+import ComponentA from "./ComponentA";
 import TodoDetails from "./TodoDetails";
 import todos from './todos.json'
 const FuncComp = (props) => {
-  // const {
-  //   name,
-  //   age,
-  //   student: { Standard, subSection },
-  //   children
-  // } = props;
 
-  // console.log(props);
+  const [dataFromChild, setDataFromChild] = useState(null)
+  console.log(dataFromChild)
 
   return (
     <div>
-      {/* FuncComp
-      <p>
-        Name of student is {name} and age is {age}
-      </p>
-      <div>
-        Class = {Standard}
-        Section = {subSection}
-      </div>
+      Functional Comp is rendered - {dataFromChild}
 
-      <h3>{children}</h3> */}
-
-      <TodoDetails todos={todos.slice(0,40)}/>
+      <ComponentA stateChnageFunc= {setDataFromChild}/>
     </div>
   );
 };

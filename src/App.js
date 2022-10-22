@@ -6,9 +6,21 @@ import FuncComp from "./Components/FuncComp";
 import ClassComp from "./Components/ClassComp";
 import StateFuncComp from "./Components/StateFuncComp";
 import Todos from "./Components/Todos";
+import { createContext, useState } from "react";
+import ComponentA from "./Components/ComponentA";
+import ClassLCComp from "./Components/ClassLCComp";
+import FuncLcComp from "./Components/FuncLcComp";
+import UseReducerComp from "./Components/UseReducerComp";
+import UseMemoComp from "./Components/UseMemoComp";
 
 const student = { Standard: "12", subSection: "A" };
+
+export const messageContext = createContext(null);
+messageContext.displayName = "MyDisplayName";
+
 function App() {
+  const [mount, setMount] = useState(true);
+
   return (
     <div className="App">
       {/* <FuncComp
@@ -22,7 +34,17 @@ function App() {
         student={{ Standard: "10", subSection: "B" }}
       /> */}
       {/* <Todos/> */}
-      <FuncComp/>
+      {/* <FuncComp/> */}
+      {/* <StateFuncComp/> */}
+      {/* <messageContext.Provider value={{name:"ABC", age:20}}>
+        <ComponentA  />
+      </messageContext.Provider> */}
+      {/* {mount && <FuncLcComp />} */}
+      {/* <ClassLCComp /> */}
+      {/* <FuncLcComp/> */}
+      {/* <button onClick={() => setMount(!mount)}>Mount/Unmount</button> */}
+      {/* <UseReducerComp /> */}
+      <UseMemoComp/>
     </div>
   );
 }

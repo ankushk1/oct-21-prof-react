@@ -7,9 +7,30 @@ const StateFuncComp = () => {
   });
 
   const onIncrement = (num) => {
-    setCount({
-      ...count,
-      num1: count.num1 + 1
+
+    // setCount({
+    //   ...count,
+    //   num1 : count.num1 + 1
+    // });
+
+    // setCount({
+    //   ...count,
+    //   num1 : count.num1 + 1
+    // });
+
+    setCount((prev) => {
+      console.log(prev);
+      return {
+        ...count,
+        num1: prev.num1 + 1
+      };
+    });
+    setCount((prevVal) => {
+      console.log(prevVal);
+      return {
+        ...count,
+        num1: prevVal.num1 + 1
+      };
     });
   };
 
@@ -46,18 +67,18 @@ const StateFuncComp = () => {
 
   return (
     <div>
-      {console.log(count)}
+      {/* {console.log(count)} */}
       Num1 is = {count.num1} <br />
-      Num2 is = {count.num2}
+      {/* Num2 is = {count.num2} */}
       <div>
         <button onClick={() => onIncrement(10)}>Increment</button>
         <button onClick={() => onDecrement()}>Decrement</button>
         <button onClick={() => Reset()}>Reset</button>
       </div>
-      <div>
+      {/* <div>
         <button onClick={() => onIncrement2()}>Increment2</button>
         <button onClick={() => onDecrement2()}>Decrement2</button>
-      </div>
+      </div> */}
     </div>
   );
 };
