@@ -12,6 +12,8 @@ import ClassLCComp from "./Components/ClassLCComp";
 import FuncLcComp from "./Components/FuncLcComp";
 import UseReducerComp from "./Components/UseReducerComp";
 import UseMemoComp from "./Components/UseMemoComp";
+import UseCallbackComp from "./Components/UseCallbackComp";
+import FormComp from "./Components/FormComp";
 
 const student = { Standard: "12", subSection: "A" };
 
@@ -44,7 +46,9 @@ function App() {
       {/* <FuncLcComp/> */}
       {/* <button onClick={() => setMount(!mount)}>Mount/Unmount</button> */}
       {/* <UseReducerComp /> */}
-      <UseMemoComp/>
+      {/* <UseMemoComp/> */}
+      {/* <UseCallbackComp/> */}
+      <FormComp/>
     </div>
   );
 }

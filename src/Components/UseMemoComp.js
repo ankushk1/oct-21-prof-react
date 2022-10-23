@@ -1,6 +1,7 @@
 import React, { useState, useMemo, useEffect } from "react";
 
 function slowFunc(n) {
+  console.log('slowFunc called');
   for (var i = 0; i < 1000000000; i++) {}
   return n * 2;
 }
