@@ -1,14 +1,27 @@
 import React from "react";
 import { useForm } from "../utils/customHooks";
-import ComponentB from "./ComponentB";
 
-const ComponentA = ({ message }) => {
+const UseForm = () => {
   const { values, onHandleChange, onHandleSubmit } = useForm();
 
   return (
-    <div style={{marginTop: '60px'}}>
-      <h2>Component A</h2>
+    <div>
       <form>
+        <input
+          type="text"
+          placeholder="First Name"
+          value={values.firstName}
+          name="firstName"
+          onChange={(event) => onHandleChange(event)}
+        />{" "}
+        <br />
+        <input
+          type="text"
+          placeholder="Last Name"
+          name="lastName"
+          value={values.lastName}
+          onChange={(event) => onHandleChange(event)}
+        />
         <input
           type="email"
           placeholder="Email"
@@ -26,8 +39,9 @@ const ComponentA = ({ message }) => {
         />{" "}
         <br />
       </form>
+      <button onClick={()=> onHandleSubmit('signup')}> Submit</button>
     </div>
   );
 };
 
-export default ComponentA;
+export default UseForm;
