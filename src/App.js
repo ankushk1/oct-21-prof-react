@@ -17,6 +17,8 @@ import FormComp from "./Components/FormComp";
 import ApiComp from "./Components/ApiComp";
 import UseForm from "./Components/UseForm";
 import UseTheme from "./Components/UseTheme";
+import Counter from "./HOC/Counter";
+import Hover from "./HOC/Hover";
 
 const student = { Standard: "12", subSection: "A" };
 
@@ -52,10 +54,12 @@ function App() {
       {/* <UseMemoComp/> */}
       {/* <UseCallbackComp/> */}
       {/* <FormComp/> */}
-      <ApiComp/>
+      {/* <ApiComp/> */}
       {/* <UseForm/>
       <ComponentA/> */}
       {/* <UseTheme/> */}
+      <Counter name="ABC" age={20}  />
+      <Hover name="XYZ" age={20} city="DELHI"/>
     </div>
   );
 }
