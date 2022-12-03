@@ -20,6 +20,7 @@ import UseTheme from "./Components/UseTheme";
 import Counter from "./HOC/Counter";
 import Hover from "./HOC/Hover";
 import Todo from "./Components/Todo";
+import CounterRedux from "./Components/CounterRedux";
 
 const student = { Standard: "12", subSection: "A" };
 
@@ -62,6 +63,7 @@ function App() {
       {/* <Counter name="ABC" age={20}  />
       <Hover name="XYZ" age={20} city="DELHI"/> */}
       <Todo/>
+      {/* <CounterRedux/> */}
     </div>
   );
 }
